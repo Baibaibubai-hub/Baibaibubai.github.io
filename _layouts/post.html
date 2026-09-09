@@ -1,0 +1,87 @@
+---
+layout: default
+---
+
+<style>
+  body {
+    background-color: #f5f7fa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .container {
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 0 16px;
+  }
+
+  .card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    padding: 32px 28px;
+    margin-bottom: 24px;
+  }
+
+  .post-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 12px 0;
+    line-height: 1.3;
+  }
+
+  .post-meta {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .post-content {
+    color: #334155;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .post-content p {
+    margin-bottom: 1.2em;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 32px;
+    color: #0d9488;
+    text-decoration: none;
+    font-size: 15px;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
+  .footer {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+    margin-top: 40px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<div class="container">
+  <div class="card">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-meta">
+      {{ page.date | date: "%Y年%m月%d日" }}
+    </div>
+
+    <div class="post-content">
+      {{ content }}
+    </div>
+
+    <a href=" '/' | relative_url }}" class="back-link">← 返回首页</a >
+  </div>
+
+  <div class="footer">
+    🛡️ 保持好奇 · 保持怀疑
+  </div>
+</div>
