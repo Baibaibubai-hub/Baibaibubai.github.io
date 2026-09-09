@@ -98,7 +98,7 @@ layout: default
     </div>
 
     {% for post in site.posts limit:1 %}
-      <a href=" " class="post-link">
+      <a href="{{ post.url | relative_url }}" class="post-link">
         📄 点击查看我的第一个帖子
       </a >
       <div class="post-tag">首发 · {{ post.date | date: "%Y" }}</div>
