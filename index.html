@@ -97,15 +97,17 @@ layout: default
       📡 记录攻防技术 · 渗透笔记 · 安全思考
     </div>
 
-    <a href=" " class="post-link">
-      📄 点击查看我的第一个帖子
-    </a >
-    <div class="post-tag">首发 · 2026</div>
+    {% for post in site.posts limit:1 %}
+      <a href=" " class="post-link">
+        📄 点击查看我的第一个帖子
+      </a >
+      <div class="post-tag">首发 · {{ post.date | date: "%Y" }}</div>
+    {% endfor %}
   </div>
 
   <div class="footer">
     🛡️ 保持好奇 · 保持怀疑
     <br><br>
-    <a href="/feed.xml">RSS</a > · <a href="#">关于</a >
+    <a href="{{ '/feed.xml' | relative_url }}">RSS</a > · <a href="#">关于</a >
   </div>
 </div>
